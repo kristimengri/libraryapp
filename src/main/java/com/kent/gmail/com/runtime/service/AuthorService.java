@@ -107,6 +107,11 @@ public class AuthorService {
     return author;
   }
 
+
+  public List<Author> findAuthorsWithCoAuthors() {
+    return repository.findAuthorsWithCoAuthors();
+  }
+
   public <T extends Author, I> List<T> listByIds(
       Class<T> c,
       SingularAttribute<? super T, I> idField,
